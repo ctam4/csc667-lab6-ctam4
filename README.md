@@ -1,15 +1,18 @@
-# react router
-https://reacttraining.com/react-router/web/guides/quick-start
+# redux thunk
+https://github.com/reduxjs/redux-thunk
 
-- Create a new route and component for a user page
-- Make an email input for the login page
-- Make a state variable for logged in
-- When user clicks submit button, send them to user page
+# Mongodb 
+- download mongodb and robo 3t
+- https://www.mongodb.com/download-center/community
+- https://robomongo.org
 
-# redux
-- Replace the email state with redux
-- migrate isLoggedIn to redux
-- Display a welcome message on the home page
-- Display a welcome message on the header
-- Remove the login page from the nav bar
-- Create a log out feature
+# Todo
+- Start server and make sure you can connect to database
+- Check that login works
+- Connect login to mongo
+- Create a login button
+- Throw an error if username is already taken
+- Create a list on the user's dashboard
+- create a new endpoint to load a list of strings
+- every time an item is inserted send it to the server
+- store items in a mongodb array
