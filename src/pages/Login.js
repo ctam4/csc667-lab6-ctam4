@@ -4,7 +4,8 @@ import {
   setUser,
   setPassword,
   setIsLoggedIn,
-  setLoadingState
+  setLoadingState,
+  login,
 } from '../redux/actions/userActions';
 import { Redirect } from 'react-router-dom';
 
@@ -57,7 +58,7 @@ const Login = ({
       </div>
       <div>
         {loadingState === 'error' && <b>User name or password incorrect</b>}
-        <button onClick={logIn}>Log in</button>
+        <button onClick={() => dispatch(login())}>Log in</button>
       </div>
     </div>
   );

@@ -24,6 +24,11 @@ client.connect(err => {
 
   app.get('/api/login', (req, res) => {
     console.log('check login');
+    if (!req.query.password) {
+      res.send({
+        valid: false
+      });
+    }
     db.collection('MyCollection')
       .findOne({
         userId: req.query.userId
@@ -31,7 +36,7 @@ client.connect(err => {
       .then(doc => {
         console.log(doc);
         res.send({
-          valid: doc !== null
+          valid: doc !== null && doc.password === req.query.password
         });
       })
       .catch(e => {
